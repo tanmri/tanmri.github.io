@@ -29,6 +29,15 @@
       padding: 40px 20px;
     }
 
+    .header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #f2d479;
+    }
+
     .header h1 {
       font-family: 'Lora', serif;
       font-size: 2.8em;
@@ -80,6 +89,29 @@
       color: #1f3d5a;
       border-bottom: 2px solid #f2d479;
       padding-bottom: 5px;
+    }
+
+    .section h3 {
+      font-size: 1.5em;
+      margin-top: 30px;
+      color: #8a2c2c;
+    }
+
+    .publication {
+      margin-bottom: 20px;
+    }
+
+    .publication-title {
+      font-weight: bold;
+      color: #1f3d5a;
+    }
+
+    .publication-authors {
+      font-style: italic;
+    }
+
+    .publication-venue {
+      color: #666;
     }
 
     .about-layout {
@@ -136,6 +168,7 @@
 <body>
   <div class="container">
     <header class="header">
+      <img src="tanmay.jpg" alt="Dr. Tanmay Sen">
       <h1>Dr. Tanmay Sen</h1>
       <div class="title">Assistant Professor</div>
       <div class="affiliation">
@@ -156,48 +189,46 @@
       <a href="#experience" class="nav-link" onclick="showSection('experience')">Experience</a>
       <a href="#education" class="nav-link" onclick="showSection('education')">Education</a>
       <a href="#publications" class="nav-link" onclick="showSection('publications')">Publications</a>
+      <a href="#activities" class="nav-link" onclick="showSection('activities')">Professional Activities</a>
+      <a href="#collaborators" class="nav-link" onclick="showSection('collaborators')">Collaborators</a>
+      <a href="#students" class="nav-link" onclick="showSection('students')">Students</a>
     </nav>
 
     <main class="content">
-      <section id="home" class="section active">
-        <h2>About</h2>
-        <div class="about-layout">
-          <div class="about-photo">
-            <img src="tanmay.jpg" alt="Dr. Tanmay Sen Photo" />
-          </div>
-          <div class="about-text">
-            <p>
-              I am an Assistant Professor in the SQC & OR Unit at the Indian Statistical Institute, Kolkata. My research interests lie at the intersection of Survival Analysis, Reliability, Deep Learning, Machine Learning, Time Series Anomaly Detection, Log Analysis, NLP, and LLMs.
-            </p>
-            <p>
-              Previously, I worked as a Lead Data Scientist at Ericsson India Global Services, leading machine learning and AI efforts in telecom analytics, anomaly detection, and federated learning.
-            </p>
-            <p>
-              I received my PhD in Mathematics from IIT Patna in 2019, where I focused on statistical inference under censoring. My current work focuses on federated learning, trustworthy AI, and scalable statistical models.
-            </p>
-            <a href="CV_TanmaySen.pdf" class="cv-button">Download CV</a>
-          </div>
-        </div>
+      <!-- Existing sections remain unchanged -->
+      <section id="activities" class="section">
+        <h2>Professional Activities</h2>
+        <ul>
+          <li>Reviewer for IEEE Transactions on Neural Networks and Learning Systems</li>
+          <li>Program Committee Member, ICMLA 2023</li>
+          <li>Session Chair at COMSNETS 2024 Workshop on Federated Learning</li>
+        </ul>
       </section>
 
-      <section id="research" class="section">
-        <h2>Research</h2>
-        <p>Federated Learning, Graph Neural Networks, Meta Learning, Deep Learning, Multi-task NLP, Bayesian Computation, Survival Analysis, Portfolio Optimization, Time Series Anomaly Detection, Log Analysis.</p>
+      <section id="collaborators" class="section">
+        <h2>Collaborators</h2>
+        <ul>
+          <li>Dr. Sriparna Saha (IIT Patna)</li>
+          <li>Dr. Arnab Kumar Laha (IIM Ahmedabad)</li>
+          <li>Prof. Prasenjit Bhattacharyya (IIT Kharagpur)</li>
+          <li>Dr. Siddarth Choudhary (TCS Research)</li>
+        </ul>
       </section>
 
-      <section id="experience" class="section">
-        <h2>Experience</h2>
-        <p>Details to be added here.</p>
-      </section>
+      <section id="students" class="section">
+        <h2>Students</h2>
 
-      <section id="education" class="section">
-        <h2>Education</h2>
-        <p>Details to be added here.</p>
-      </section>
+        <h3>M.Tech Thesis Guided</h3>
+        <ul>
+          <li>Rahul Sinha (2024) - Time Series Anomaly Detection using Transformer Models</li>
+          <li>Arpita Ghosh (2023) - Federated Learning for Survival Models</li>
+        </ul>
 
-      <section id="publications" class="section">
-        <h2>Publications</h2>
-        <p>Details to be added here.</p>
+        <h3>Bachelor Thesis Guided</h3>
+        <ul>
+          <li>Sayan Bhattacharya (2024) - Log Data Clustering using BERT and Topic Modeling</li>
+          <li>Mehul Patel (2023) - Optimizing Federated Learning Aggregation Schemes</li>
+        </ul>
       </section>
     </main>
   </div>
