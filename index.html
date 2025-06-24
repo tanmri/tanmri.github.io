@@ -1,26 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Academic Website</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tanmay Sen - Statistics & Machine Learning</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .experience-company {
+            font-size: 1.1em;
+            color: #667eea;
+            margin-top: 5px;
+        }
+
+        .experience-duration {
+            color: #666;
+            font-style: italic;
+            min-width: 200px;
+            text-align: right;
+        }
+
+        .experience-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .experience-description li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: rgba(102, 126, 234, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .education-degree {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .education-school {
+            color: #667eea;
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .education-year {
+            color: #666;
+            font-style: italic;
+        }
+
+        .publications-list {
+            list-style: none;
+        }
+
+        .publications-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .publication-authors {
+            color: #666;
+            font-style: italic;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+            }
+            
+            .experience-duration {
+                text-align: left;
+                margin-top: 10px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Academic Website</h1>
-    <nav>
-      <ul>
-        <li><a href="background.html">My Background</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-    <h2>Hello, I'm [Your Name]</h2>
-    <p>I am an Assistant Professor at Indian Statistical Institute Kolkata. Welcome to my website!</p>
-    <p>Here you can find my academic background, research publications, and teaching resources.</p>
-  </section>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile-img">TS</div>
+            <h1>Dr. Tanmay Sen</h1>
+            <p class="subtitle">Assistant Professor | Statistics & Machine Learning Specialist</p>
+            <p style="color: #666; margin: 10px 0;">Indian Statistical Institute, Kolkata</p>
+            
+            <div class="contact-info">
+                <a href="mailto:sentanmay518@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    sentanmay518@gmail.com
+                </a>
+                <a href="mailto:tanmay.sen@isical.ac.in" class="contact-item">
+                    <i class="fas fa-university"></i>
+                    tanmay.sen@isical.ac.in
+                </a>
+                <a href="tel:+918084526317" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    +91 8084526317
+                </a>
+                <a href="#" class="contact-item">
+                    <i class="fab fa-google"></i>
+                    Google Scholar
+                </a>
+            </div>
+            
+            <a href="#" class="download-btn">
+                <i class="fas fa-download"></i>
+                Download Resume
+            </a>
+        </header>
+
+        <!-- About Section -->
+        <section class="section">
+            <h2><i class="fas fa-user"></i> About</h2>
+            <p style="font-size: 1.1em; color: #555; line-height: 1.8;">
+                I am an Assistant Professor at the Indian Statistical Institute, Kolkata, specializing in Statistics and Machine Learning. 
+                My research focuses on federated learning, deep learning, and their applications in telecommunications and data science. 
+                I have extensive industry experience as a Lead Data Scientist at Ericsson, where I worked on cutting-edge ML/AI solutions 
+                for telecom networks, anomaly detection, and generative AI applications.
+            </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section">
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Assistant Professor</div>
+                        <div class="experience-company">Indian Statistical Institute, Kolkata</div>
+                    </div>
+                    <div class="experience-duration">October 2024 - Present</div>
+                </div>
+                <div class="experience-description">
+                    <p>Currently serving as Assistant Professor in the SQC & OR Unit, focusing on advanced statistical methods and machine learning research.</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Lead Data Scientist</div>
+                        <div class="experience-company">Ericsson India Global Services</div>
+                    </div>
+                    <div class="experience-duration">May 2023 - October 2024</div>
+                </div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Developed unsupervised multiple KPI time series anomaly detection and prediction models using Prophet, seq2seq models, Python, PySpark, and Docker</li>
+                        <li>Implemented ping-pong handover rate anomaly detection and prediction systems</li>
+                        <li>Led language translation projects from Java to Go using OpenAI GPT-4 API</li>
+                        <li>Developed AI4CI - RCA finding tool using drain3 algorithm for Jenkins CI/CD logs analysis</li>
+                        <li>Created end-to-end test case generation system using LLM and RAG with custom embedding models</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="experience-title">Data Scientist</div>
+                        <div class="experience-company">Ericsson India Global Services</div>
+                    </div>
+                    <div class="experience-duration">August 2019 - April 2023</div>
+                </div>
+                <div class="experience-description">
+                    <ul>
+                        <li>Developed federated learning solutions with weighted aggregation and boosting techniques for telecom KPI degradation classification</li>
+                        <li>Built power outage prediction models using deep learning for site reliability optimization</li>
+                        <li>Implemented log analysis systems using ELK stack and BERT for customer service optimization</li>
+                        <li>Created churn classification models for AT&T prepaid customers using H2O and MLflow</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section">
+            <h2><i class="fas fa-cogs"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Machine Learning & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Federated Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Graph Neural Networks</span>
+                        <span class="skill-tag">Meta Learning</span>
+                        <span class="skill-tag">BERT</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">GenAI</span>
+                        <span class="skill-tag">LSTM</span>
+                        <span class="skill-tag">CNN</span>
+                        <span class="skill-tag">VAE</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programming & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">PySpark</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">ELK Stack</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Statistics & Optimization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bayesian Computation</span>
+                        <span class="skill-tag">Statistical Inference</span>
+                        <span class="skill-tag">Reliability Estimation</span>
+                        <span class="skill-tag">Optimization</span>
+                        <span class="skill-tag">Portfolio Optimization</span>
+                        <span class="skill-tag">Meta-heuristics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            
+            <div class="education-item">
+                <div class="education-degree">PhD in Mathematics</div>
+                <div class="education-school">Indian Institute of Technology Patna</div>
+                <div class="education-year">2019</div>
+                <p style="margin-top: 10px; color: #666;">
+                    <strong>Thesis:</strong> "Statistical Inference and Optimal Plans Under Hybrid Censoring Scheme"<br>
+                    <strong>Advisor:</strong> Dr. Yogesh Mani Tripathi
+                </p>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-degree">Master of Technology in Mathematics and Computing</div>
+                <div class="education-school">Indian Institute of Technology Patna</div>
+                <div class="education-year">2014</div>
+                <p style="margin-top: 10px; color: #666;">
+                    <strong>CGPA:</strong> 8.68/10<br>
+                    <strong>Thesis:</strong> "Multi-Objective Portfolio Optimization Using Evolutionary Algorithms"
+                </p>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-degree">Master of Science in Mathematics</div>
+                <div class="education-school">University of Calcutta</div>
+                <div class="education-year">2011</div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-degree">Bachelor of Science in Mathematics</div>
+                <div class="education-school">University of Calcutta</div>
+                <div class="education-year">2009</div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section">
+            <h2><i class="fas fa-book"></i> Recent Publications</h2>
+            <ul class="publications-list">
+                <li>
+                    <div class="publication-title">HateTinyLLM: Hate Speech Detection Using Tiny Large Language Models</div>
+                    <div class="publication-authors">T. Sen, A. Das, and M. Sen (2024)</div>
+                    <div style="color: #666; margin-top: 5px;">arXiv preprint</div>
+                </li>
+                <li>
+                    <div class="publication-title">Federated Meta-Learning for Emotion and Sentiment Aware Multi-modal Complaint Identification</div>
+                    <div class="publication-authors">A Singh, Siddarth C, S Saha, and T. Sen</div>
+                    <div style="color: #666; margin-top: 5px;">EMNLP 2023</div>
+                </li>
+                <li>
+                    <div class="publication-title">FedCI-GAT: Federated Multi-task Learning for Complaint Identification using Graph Attention Network</div>
+                    <div class="publication-authors">A Singh, Siddarth C, T. Sen and S Saha (2023)</div>
+                    <div style="color: #666; margin-top: 5px;">IEEE Transactions on Artificial Intelligence</div>
+                </li>
+                <li>
+                    <div class="publication-title">Human activity recognition using Federated graph neural network</div>
+                    <div class="publication-authors">A. Sarkar, T. Sen, A. Roy (2021)</div>
+                    <div style="color: #666; margin-top: 5px;">ICMLA2021 AML-IoT FLAME</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Patent Section -->
+        <section class="section">
+            <h2><i class="fas fa-lightbulb"></i> Patent</h2>
+            <div style="padding: 20px; background: rgba(102, 126, 234, 0.05); border-radius: 15px; border-left: 4px solid #667eea;">
+                <div class="publication-title">INTELLIGENT SOURCE SWITCHING IN MICROGRID CONNECTED HOUSEHOLDS</div>
+                <div class="publication-authors">A Sarkar, A Sen, AK Roy, DN Hegde, H Hallberg, T Sen</div>
+                <div style="color: #666; margin-top: 5px;">US Patent App. 18/688,403, 2024</div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
+
