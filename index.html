@@ -25,19 +25,23 @@
     .header {
       background-color: #1f3d5a;
       color: white;
-      text-align: center;
+      display: flex;
+      align-items: center;
       padding: 40px 20px;
+      gap: 30px;
     }
 
     .header img {
-      width: 300px;
-      height: 300px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 15px;
       border: 4px solid #f2d479;
     }
 
+    .header-content {
+      flex: 1;
+    }
 
     .header h1 {
       font-family: 'Lora', serif;
@@ -132,6 +136,10 @@
       background-color: #e6c96d;
     }
 
+    .section ul li {
+      margin-bottom: 15px;
+    }
+
     @media (max-width: 768px) {
       .about-layout {
         flex-direction: column;
@@ -145,11 +153,20 @@
       .about-text {
         text-align: left;
       }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-content {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
-<body>
+<!-- <body>
   <div class="container">
     <header class="header">
       <img src="tanmay.jpg" alt="Dr. Tanmay Sen">
@@ -164,6 +181,26 @@
         Email: <a href="mailto:sentanmay518@gmail.com" style="color:#f2d479;">sentanmay518@gmail.com</a> / 
         <a href="mailto:tanmay.sen@isical.ac.in" style="color:#f2d479;">tanmay.sen@isical.ac.in</a><br>
         Phone: +91 8084526317 / +91 6363168171
+      </div>
+    </header> -->
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="tanmay.jpg" alt="Dr. Tanmay Sen">
+      <div class="header-content">
+        <h1>Dr. Tanmay Sen</h1>
+        <div class="title">Assistant Professor</div>
+        <div class="affiliation">
+          SQC & OR Unit, Indian Statistical Institute Kolkata<br>
+          6th floor, Kolmogorov Bhavan, 203 B. T. Road,<br>
+          Kolkata - 700108, India
+        </div>
+        <div class="contact">
+          Email: <a href="mailto:sentanmay518@gmail.com" style="color:#f2d479;">sentanmay518@gmail.com</a> / 
+          <a href="mailto:tanmay.sen@isical.ac.in" style="color:#f2d479;">tanmay.sen@isical.ac.in</a><br>
+          Phone: +91 8084526317 / +91 6363168171
+        </div>
       </div>
     </header>
 
