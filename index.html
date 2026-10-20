@@ -197,6 +197,90 @@
         width: 100%;
       }
     }
+
+    
+/* Latest News & Announcements */
+.news-section {
+  margin-top: 45px;
+  padding: 25px;
+  background: #f8f9fb;
+  border-left: 5px solid #8a2c2c;
+  border-radius: 8px;
+}
+
+.news-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.news-intro {
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.news-item {
+  background: #fff;
+  border: 1px solid #e3e6eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: box-shadow 0.25s ease;
+}
+
+.news-item:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85em;
+  color: #666;
+}
+
+.news-tag {
+  background: #e9eef5;
+  color: #1f3d5a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.news-item h3 {
+  margin: 8px 0;
+  font-size: 1.2em;
+  color: #1f3d5a;
+}
+
+.news-item p {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.news-link {
+  color: #8a2c2c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .news-section {
+    padding: 18px;
+  }
+
+  .news-item {
+    padding: 15px;
+  }
+}
+
   </style>
 </head>
 
@@ -302,6 +386,88 @@
           <img src="https://www.worldflagcounter.com/iTJ/" alt="Flag Counter">
         </a>
       </div> -->
+
+        
+<!-- Latest News & Announcements -->
+<div class="news-section">
+
+  <h2>Latest News & Announcements</h2>
+
+  <p class="news-intro">
+    Updates on research opportunities, workshops, publications,
+    and academic activities at ISI Kolkata.
+  </p>
+
+  <!-- Announcement 1 -->
+  <div class="news-item">
+    <div class="news-meta">
+      <span class="news-tag">Recruitment</span>
+      <span>15 October 2026</span>
+    </div>
+
+    <h3>Research Associate Position at ISI Kolkata</h3>
+
+    <p>
+      Applications are invited from Indian nationals for a
+      temporary Research Associate position in the Statistical
+      Quality Control & Operations Research Unit of the
+      Indian Statistical Institute, Kolkata.
+    </p>
+
+    <a class="news-link"
+       href="YOUR_RECRUITMENT_NOTICE_URL"
+       target="_blank"
+       rel="noopener noreferrer">
+      View recruitment notice →
+    </a>
+  </div>
+
+  <!-- Announcement 2 -->
+  <div class="news-item">
+    <div class="news-meta">
+      <span class="news-tag">Workshop</span>
+      <span>30 November – 4 December 2026</span>
+    </div>
+
+    <h3>AI-STEP 2026 at ISI Kolkata</h3>
+
+    <p>
+      AI-STEP 2026 will bring together participants interested
+      in artificial intelligence, machine learning, and
+      emerging research directions.
+    </p>
+
+    <a class="news-link"
+       href="https://www.isical.ac.in/~caiml/aistep/"
+       target="_blank"
+       rel="noopener noreferrer">
+      Visit workshop website →
+    </a>
+  </div>
+
+  <!-- Announcement 3 -->
+  <div class="news-item">
+    <div class="news-meta">
+      <span class="news-tag">Research</span>
+    </div>
+
+    <h3>Research and Collaboration Opportunities</h3>
+
+    <p>
+      I welcome discussions with motivated students and
+      researchers interested in reliability, survival analysis,
+      federated learning, anomaly detection, and machine learning.
+    </p>
+
+    <a class="news-link"
+       href="mailto:tanmay.sen@isical.ac.in">
+      Get in touch →
+    </a>
+  </div>
+
+</div>
+</section>
+
 
         
       </section>
